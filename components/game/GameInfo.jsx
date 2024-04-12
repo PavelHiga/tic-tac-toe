@@ -1,21 +1,20 @@
-import { GameSymbol } from './GameSymbol';
-import style from '../../style/game.module.css';
+import { GameSymbol } from "./GameSymbol";
 
 export function GameInfo({ isDraw, winnerSymbol, currentStep }) {
   if (isDraw) {
-    return <div className={style['game-info']}>Ничья</div>;
+    return <div className="mb-3">Ничья</div>;
   }
 
   if (winnerSymbol) {
     return (
-      <div className={style['game-info']}>
+      <div className="mb-3">
         Победитель: <GameSymbol symbol={winnerSymbol} />
       </div>
     );
   }
 
   return (
-    <div className={style['game-info']}>
+    <div className="mb-3">
       Ход: <GameSymbol symbol={currentStep} />
     </div>
   );
