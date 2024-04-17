@@ -1,6 +1,7 @@
 import Image from "next/image";
 import logoSrc from "../../assets/icons/logo.svg";
 import { Profile } from "../profile/Profile";
+import { ArrowDownIcon } from "../../assets/icons/ArrowDownIcon";
 
 export const Header = () => {
   return (
@@ -10,7 +11,10 @@ export const Header = () => {
       <button className="w-44 bg-teal-600 py-2 rounded-lg text-white hover:bg-teal-500 transition-colors text-2xl leading-tight">
         Играть
       </button>
-      <Profile />
+      <button className="flex ml-auto items-center gap-x-2 text-teal-600">
+        <Profile />
+        <ArrowDownIcon />
+      </button>
     </header>
   );
 };
